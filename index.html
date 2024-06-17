@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="./login.html/style.css">
+    <script>  
+        function validateLogin() {  
+            var username = document.getElementById('username').value;  
+            var password = document.getElementById('password').value;  
+                
+            if (username === 'kwl' && password === '123456') {  
+                window.location.href = './index2.html/index2.html'; // 跳转到首页  
+            } else {  
+                alert('账号或密码错误，请重试！');  
+            }  
+        }  
+    </script> 
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>登录</h1>
+        </div>
+        <div class="main">
+            <form onsubmit="validateLogin(); return false;">  
+                <div>  
+                    <i class="fas fa-user"></i>  
+                    <input type="text" id="username" placeholder="账号" required>  
+                </div><br>  
+                <div>  
+                    <i class="fas fa-lock"></i>  
+                    <input type="password" id="password" placeholder="密码" required>  
+                </div><br>  
+                <button type="submit">登 录</button>  
+            </form>  
+        </div>
+    </div> 
+</body>
+</html>
